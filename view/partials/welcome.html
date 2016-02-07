@@ -1,0 +1,45 @@
+<div>
+	<div class="row">
+		<div class="col-lg-offset-2 col-lg-2">
+			{{'HELLO' | translate}}
+		</div>
+		<div class="col-lg-offset-2 col-lg-6 form-horizontal">
+			<label class="col-lg-4 control-label" for="modName">{{ 'MOD_NAME' | translate}}</label>
+			<div class="col-lg-4">
+				<input type="text" ng-model="modName.value" id="modName" class="form-control"/>
+			</div>
+			<button id="generateXmlBtn" ng-click="generateXmlBtn()" class="btn btn-default col-lg-3">{{ 'BTN_GENERATE_XML' | translate}}</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="row">
+				<div class="col-lg-offset-2 col-lg-10">
+					<label translate="LIST_SOFTWARES"
+					translate-values="{nb_soft: software.length}"></label>
+					<ul>
+						<li ng-repeat="(field, software) in software">
+							<a href="#/software/{{field}}">{{software.name.value}}</a>
+						</li>
+					</ul>
+					<button id="addSoftwareBtn" ng-click="addSoftwareBtn()" class="btn btn-default">{{ 'BTN_ADD_SOFTWARE' | translate}}</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-offset-2 col-lg-10">
+					<label translate="LIST_NAME_GEN"
+					translate-values="{nb_gen: nameGenerator.length}"></label>
+					<ul>
+						<li ng-repeat="(field, nameGen) in nameGenerator">
+							<a href="#/software/{{field}}">{{nameGen.name.value}}</a>
+						</li>
+					</ul>
+					<button id="addNameGenBtn" ng-click="addNameGenBtn()" class="btn btn-default">{{ 'BTN_ADD_NAME_GEN' | translate}}</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-ld-6">
+			salut
+		</div>
+	</div>
+</div>

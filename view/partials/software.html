@@ -1,0 +1,51 @@
+<a id="btn_soft_back" href="#/" class="btn btn-default">{{ 'BTN_SOFT_BACK' | translate}}</a>
+<div class="row col-lg-12 sim_header">
+	<label class="bg-success col-lg-12">{{ 'SOFTWARE_LABEL' | translate}}</label>
+</div>
+<div class="col-lg-6 form-horizontal">
+	<div class="sim_block">
+		<div class="row">
+			<label class="col-lg-12">{{ 'INFORMATION_LABEL' | translate}}</label>
+		</div>
+		<div class="row">
+			<label class="col-lg-2 control-label" for="fileName">{{ 'FILE_NAME' | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedSoftware.fileName" id="fileName" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-2 control-label" for="name">{{ selectedSoftware.name.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedSoftware.name.value" id="name" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-2 control-label" for="type">{{ selectedSoftware.type.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedSoftware.type.value" id="type" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-2 control-label" for="categories">{{ selectedSoftware.categories.description | translate}}</label>
+			<div class="col-lg-8">
+				<button id="addCategory" ng-click="addCategoryBtn()" class="btn btn-default">{{ 'BTN_ADD_CATEGORY' | translate}}</button>
+				<ul>
+					<li ng-repeat="(index, category) in selectedSoftware.categories.value">
+						<a ng-click="selectCategory($index)" href="">{{category.category.value.name.value}}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="col-lg-6">
+	<div class="sim_block">
+		<div ng-switch="selectedCategory != undefined">
+			<div ng-switch-when="true">
+				<div ng-include="'view/partials/software/category.html'">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

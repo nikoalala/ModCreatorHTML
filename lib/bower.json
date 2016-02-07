@@ -1,0 +1,27 @@
+{
+  "name": "Nicolas",
+  "authors": [
+    "nikoalala <nikoalala@gmail.com>"
+  ],
+  "description": "essai",
+  "main": "file",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "d"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0"
+  }
+}

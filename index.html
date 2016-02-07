@@ -1,0 +1,31 @@
+<html ng-app="softModCreator">
+	<head>
+		<meta charset="UTF-8">
+		<title>Modding HTML- Software Inc.</title>
+		<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+		<script src="./lib/jquery/jquery.min.js"></script>
+		<script src="./lib/angular.min.js"></script>
+		<script src="./lib/angular-route.min.js"></script>
+		<script src="./lib/angular-translate.min.js"></script>
+		<script src="./lib/angular-translate-loader-static-files.min.js"></script>
+		<script src="./lib/jsZip/jszip.min.js"></script>
+		<script src="./lib/XMLWriter-1.0.0.js"></script>
+		<script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
+		<script src="./lib/bootstrap/js/bootstrap.js"></script>
+		<script src="./script/app.js"></script>
+		<script src="./script/service/zipFile.js"></script>
+		<script src="./script/service/xmlGenerator.js"></script>
+		<script src="./script/service/nameGenerator.js"></script>
+		<script src="./script/controller/softIncCtrl.js"></script>
+		<script src="./script/controller/softwareCtrl.js"></script>
+		<script src="./script/model/DataContainer.js"></script>
+		<script src="./script/model/Categories.js"></script>
+		<script src="./script/model/Category.js"></script>
+		<script src="./script/model/Software.js"></script>
+
+		
+	</head>
+	<body ng-controller="softIncCtrl">
+		<div class="container row" ng-view></div>
+	</body>
+</html>

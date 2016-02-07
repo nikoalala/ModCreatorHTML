@@ -1,0 +1,38 @@
+{
+    "ALLIANZ_WEBAPP_VERSION" : "${project.version}",
+
+    "HELLO" : "Bienvenue !",
+    "MOD_NAME" : "Nom du mod",
+    "FILE_NAME" : "Nom du fichier",
+
+    "LIST_SOFTWARES": "Vous avez {{nb_soft}} logiciel(s) :",
+    "LIST_NAME_GEN": "Vous avez {{nb_gen}} générateur(s) de nom :",
+    
+    "SOFTWARE_LABEL": "Logiciel",
+    "CATEGORY_LABEL": "Catégorie",
+
+    "SOFT_NAME_TRAD": "Nom",
+    "SOFT_TYPE_TRAD": "Type",
+    "SOFT_CATEGORY_TRAD": "Catégories",
+    "INFORMATION_LABEL": "Information",
+    "FEATURES_LABEL": "Fonctions",
+
+    "CATEG_NAME_TRAD": "Nom",
+    "CATEG_DESCRIPTION_TRAD": "Description",
+    "CATEG_POPULARITY_TRAD": "Popularité",
+    "CATEG_RETENTION_TRAD": "Rétention",
+    "CATEG_TIMESCALE_TRAD": "Temps de dev",
+    "CATEG_ITERATIVE_TRAD": "Utilisation par l'IA",
+    "CATEG_NAMEGEN_TRAD": "Générateur de nom",
+    "CATEG_DEFAULT_NAME": "Nouvelle catégorie",
+
+    "BTN_SOFT_BACK": "Accueil",
+
+    "BTN_GENERATE_XML": "Générer le mod",
+    "BTN_ADD_SOFTWARE": "Ajouter un logiciel",
+    "BTN_ADD_NAME_GEN": "Ajouter un générateur de nom",
+    "BTN_ADD_CATEGORY": "Ajouter une catégorie",
+    "BTN_VALID_CATEGORY": "Valider la catégorie"
+
+
+}
