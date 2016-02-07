@@ -26,12 +26,53 @@
 			</div>
 		</div>
 		<div class="row">
+			<label class="col-lg-2 control-label" for="description">{{ selectedSoftware.description.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedSoftware.description.value" id="description" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-2 control-label" for="random">{{ selectedSoftware.random.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedSoftware.random.value" id="random" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-2 control-label" for="osSpecific">{{ selectedSoftware.osSpecific.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="checkbox" ng-model="selectedSoftware.osSpecific.value" id="osSpecific" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-2 control-label" for="oneClient">{{ selectedSoftware.oneClient.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="checkbox" ng-model="selectedSoftware.oneClient.value" id="oneClient" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-2 control-label" for="inHouse">{{ selectedSoftware.inHouse.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="checkbox" ng-model="selectedSoftware.inHouse.value" id="inHouse" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
 			<label class="col-lg-2 control-label" for="categories">{{ selectedSoftware.categories.description | translate}}</label>
 			<div class="col-lg-8">
 				<button id="addCategory" ng-click="addCategoryBtn()" class="btn btn-default">{{ 'BTN_ADD_CATEGORY' | translate}}</button>
 				<ul>
 					<li ng-repeat="(index, category) in selectedSoftware.categories.value">
 						<a ng-click="selectCategory($index)" href="">{{category.category.value.name.value}}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-2 control-label" for="needs">{{ selectedSoftware.needs.description | translate}}</label>
+			<div class="col-lg-8">
+				<button id="addNeed" ng-click="addNeedBtn()" class="btn btn-default">{{ 'BTN_ADD_NEED' | translate}}</button>
+				<ul>
+					<li ng-repeat="(index, need) in selectedSoftware.needs.value">
+						<a ng-click="selectNeed($index)" href="">{{need.name.value}}</a>
 					</li>
 				</ul>
 			</div>
@@ -46,6 +87,11 @@
 				</div>
 			</div>
 		</div>
+		<div ng-switch="selectedNeed != undefined">
+			<div ng-switch-when="true">
+				<div ng-include="'view/partials/software/need.html'">
+				</div>
+			</div>
+		</div>
 	</div>
-</div>
 </div>

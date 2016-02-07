@@ -5,10 +5,11 @@
 		</div>
 		<div class="col-lg-offset-2 col-lg-6 form-horizontal">
 			<label class="col-lg-4 control-label" for="modName">{{ 'MOD_NAME' | translate}}</label>
-			<div class="col-lg-4">
+			<div class="col-lg-3">
 				<input type="text" ng-model="modName.value" id="modName" class="form-control"/>
 			</div>
 			<button id="generateXmlBtn" ng-click="generateXmlBtn()" class="btn btn-default col-lg-3">{{ 'BTN_GENERATE_XML' | translate}}</button>
+			<button id="clearSave" ng-click="clearSave()" class="btn btn-default col-lg-1">{{ 'BTN_CLEAR_SAVE' | translate}}</button>
 		</div>
 	</div>
 	<div class="row">
@@ -35,6 +36,7 @@
 						</li>
 					</ul>
 					<button id="addNameGenBtn" ng-click="addNameGenBtn()" class="btn btn-default">{{ 'BTN_ADD_NAME_GEN' | translate}}</button>
+
 				</div>
 			</div>
 		</div>

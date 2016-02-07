@@ -10,10 +10,18 @@
     
     "SOFTWARE_LABEL": "Logiciel",
     "CATEGORY_LABEL": "Catégorie",
+    "NEED_LABEL": "Dépendance logiciel",
 
     "SOFT_NAME_TRAD": "Nom",
     "SOFT_TYPE_TRAD": "Type",
     "SOFT_CATEGORY_TRAD": "Catégories",
+    "SOFT_DESCRIPTION_TRAD": "Description",
+    "SOFT_RANDOM_TRAD": "Variation",
+    "SOFT_OSSPECIFIC_TRAD": "Dépend de le l'OS",
+    "SOFT_ONECLIENT_TRAD": "Logiciel pour contrat",
+    "SOFT_INHOUSE_TRAD": "Conserver dans l'entreprise",
+    "SOFT_NEEDS_TRAD": "Dépendances logiciel",
+
     "INFORMATION_LABEL": "Information",
     "FEATURES_LABEL": "Fonctions",
 
@@ -25,14 +33,18 @@
     "CATEG_ITERATIVE_TRAD": "Utilisation par l'IA",
     "CATEG_NAMEGEN_TRAD": "Générateur de nom",
     "CATEG_DEFAULT_NAME": "Nouvelle catégorie",
+    
+    "NEED_NAME_TRAD": "Logiciel",
 
     "BTN_SOFT_BACK": "Accueil",
 
+    "BTN_CLEAR_SAVE": "Reset",
     "BTN_GENERATE_XML": "Générer le mod",
     "BTN_ADD_SOFTWARE": "Ajouter un logiciel",
     "BTN_ADD_NAME_GEN": "Ajouter un générateur de nom",
     "BTN_ADD_CATEGORY": "Ajouter une catégorie",
-    "BTN_VALID_CATEGORY": "Valider la catégorie"
+    "BTN_ADD_NEED": "Ajouter une dépendance",
+    "BTN_VALID": "Valider"
 
 
 }

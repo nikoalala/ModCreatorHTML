@@ -79,12 +79,13 @@ softModCreator.factory('ZipFile', [function () {
 				//	xw.writeStartElement(container.xmlName);
 					if(typeof container.value == "string") {
 						xw.writeElementString(container.xmlName, container.value);
+					} else if(typeof container.value == "boolean") {
+						xw.writeElementString(container.xmlName, ""+container.value);
 					} else if(container.value instanceof Array) {
 						xw.writeStartElement(container.xmlName);
 						for(var index in container.value) {
 							parseObject(xw, container.value[index]);
-						}					
-					
+						}
 						xw.writeEndElement();
 					} else {
 						xw.writeStartElement(container.xmlName);

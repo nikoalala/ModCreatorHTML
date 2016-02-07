@@ -5,19 +5,32 @@ softModCreator.controller('softwareCtrl', ['$scope', '$routeParams', function($s
 	$scope.categories = [];
 
 	$scope.selectedCategory = undefined;
-
+	$scope.selectedNeed = undefined;
 
 	$scope.addCategoryBtn = function() {
 		$scope.selectedSoftware.addCategory();
 	}
 
-	$scope.validCategoryBtn = function() {
-		$scope.selectedCategory = undefined;
+	$scope.addNeedBtn = function() {
+		$scope.selectedSoftware.addNeed();
+	}
+
+	$scope.validBtn = function() {
+		resetSubView($scope);
 	}
 
 	$scope.selectCategory = function(index) {
+		resetSubView($scope);
 		$scope.selectedCategory = $scope.selectedSoftware.categories.value[index].category.value;
 	}
 
+	$scope.selectNeed = function(index) {
+		resetSubView($scope);
+		$scope.selectedNeed = $scope.selectedSoftware.needs.value[index];
+	}
 
+	function resetSubView($scope) {
+		$scope.selectedNeed = undefined;
+		$scope.selectedCategory = undefined;
+	}
 }]);

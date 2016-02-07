@@ -50,6 +50,15 @@ softModCreator.controller('softIncCtrl', ['$scope', '$location', '$localStorage'
 		}
 	}
 
+	$scope.clearSave = function() {
+		delete $localStorage.modName;
+		delete $localStorage.software;
+		delete $localStorage.nameGenerator;
+		delete $localStorage.companyType;
+		delete $localStorage.company;
+		delete $localStorage.scenario;
+		delete $localStorage.personality;
+	}
 	$scope.load();
 	$scope.save();
 
