@@ -6,6 +6,7 @@ softModCreator.factory('Category', ['$translate', 'DataContainer', function ($tr
 
 		this.description = DataContainer.build("Description", "CATEG_DESCRIPTION_TRAD", "Description");
 		this.popularity = DataContainer.build("Popularity", "CATEG_POPULARITY_TRAD", "Popularity");
+		this.unlock = DataContainer.build("Unlock", "CATEG_UNLOCK_TRAD", "Unlock");
 		this.retention = DataContainer.build("Retention", "CATEG_RETENTION_TRAD", "Retention");
 		this.timeScale = DataContainer.build("TimeScale", "CATEG_TIMESCALE_TRAD", "TimeScale");
 		this.iterative = DataContainer.build("Iterative", "CATEG_ITERATIVE_TRAD", "Iterative");
@@ -21,12 +22,13 @@ softModCreator.factory('Category', ['$translate', 'DataContainer', function ($tr
 
 		categ.name.value = savedCateg.name.value;
 
-		categ.description.value = savedCateg.description.value ;
-		categ.popularity.value = savedCateg.popularity.value ;
-		categ.retention.value = savedCateg.retention.value ;
-		categ.timeScale.value = savedCateg.timeScale.value ;
-		categ.iterative.value = savedCateg.iterative.value ;
-		categ.nameGenerator.value = savedCateg.nameGenerator.value ;
+		categ.description.value = savedCateg.description.value;
+		categ.unlock.value = savedCateg.unlock.value;
+		categ.popularity.value = savedCateg.popularity.value;
+		categ.retention.value = savedCateg.retention.value;
+		categ.timeScale.value = savedCateg.timeScale.value;
+		categ.iterative.value = savedCateg.iterative.value;
+		categ.nameGenerator.value = savedCateg.nameGenerator.value;
 
 		return categ;
 	}

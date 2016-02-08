@@ -1,0 +1,98 @@
+<div class="row col-lg-12 sim_header">
+	<label class="bg-success col-lg-12">{{ 'FEATURE_LABEL' | translate}}</label>
+</div>
+<div class="col-lg-12 form-horizontal">
+	<div class="sim_block">
+		<div class="row">
+			<label class="col-lg-3 control-label" for="name">{{ selectedFeature.name.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedFeature.name.value" id="name" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-3 control-label" for="description">{{ selectedFeature.description.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedFeature.description.value" id="description" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-3 control-label" for="unlock">{{ selectedFeature.unlock.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedFeature.unlock.value" id="unlock" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-3 control-label" for="forced">{{ selectedFeature.forced.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="checkbox" ng-model="selectedFeature.forced.value" id="forced" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-3 control-label" for="from">{{ selectedFeature.from.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedFeature.from.value" id="from" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-3 control-label" for="devtime">{{ selectedFeature.devtime.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedFeature.devtime.value" id="devtime" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-3 control-label" for="innovation">{{ selectedFeature.innovation.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedFeature.innovation.value" id="innovation" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-3 control-label" for="usability">{{ selectedFeature.usability.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedFeature.usability.value" id="usability" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-3 control-label" for="stability">{{ selectedFeature.stability.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedFeature.stability.value" id="stability" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-3 control-label" for="codeart">{{ selectedFeature.codeart.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedFeature.codeart.value" id="codeart" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-3 control-label" for="server">{{ selectedFeature.server.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedFeature.server.value" id="server" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-3 control-label" for="softwarecategory">{{ selectedFeature.softwarecategory.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedFeature.softwarecategory.value" id="softwarecategory" class="form-control"/>
+			</div>
+		</div>
+
+		<div class="row">
+			<label class="col-lg-2 control-label" for="dependencies">{{ selectedSoftware.dependencies.description | translate}}</label>
+			<div class="col-lg-8">
+				<button id="addDependency" ng-click="addDependencyBtn()" class="btn btn-default">{{ 'BTN_ADD_DEPENDENCY' | translate}}</button>
+				<ul>
+					<li ng-repeat="(index, dep) in selectedFeature.dependencies.value">
+						<a ng-click="selectDependency($index)" href="">{{dep.dependency.value}}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div ng-switch="selectedDependency != undefined">
+			<div ng-switch-when="true">
+				<div ng-include="'view/partials/software/dependency.html'">
+				</div>
+			</div>
+		</div>
+		<button id="valid" ng-click="validBtn()" class="btn btn-default pull-right">{{ 'BTN_VALID' | translate}}</button>
+	</div>
+</div>

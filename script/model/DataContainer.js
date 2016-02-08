@@ -5,6 +5,7 @@ softModCreator.factory('DataContainer', function () {
 		this.description = description;
 		this.xmlName = xmlName;
 		this.xmlAttribute = undefined;
+		this.xmlAttributeValue = undefined;
 	}
 
 	DataContainer.build = function(name, description, xmlName) {

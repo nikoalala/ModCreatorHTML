@@ -1,5 +1,5 @@
-softModCreator.factory('Software', ['DataContainer', 'Categories', 'Category', 'Need',
-	function (DataContainer, Categories, Category, Need) {
+softModCreator.factory('Software', ['DataContainer', 'Categories', 'Category', 'Need', 'Features', 'Feature',
+	function (DataContainer, Categories, Category, Need, Features, Feature) {
 	function Software (id) {
 		this.fileName = "";
 		this.name = DataContainer.build("Name", "SOFT_NAME_TRAD", "Name");
@@ -11,6 +11,7 @@ softModCreator.factory('Software', ['DataContainer', 'Categories', 'Category', '
 		this.inHouse = DataContainer.build("InHouse", "SOFT_INHOUSE_TRAD", "InHouse");
 		this.categories = DataContainer.build("Categories", "SOFT_CATEGORY_TRAD", "Categories");
 		this.needs = DataContainer.build("Needs", "SOFT_NEEDS_TRAD", "Needs");
+		this.features = DataContainer.build("Features", "SOFT_FEATURES_TRAD", "Features");
 
 		//Default value
 		this.name.value = "Soft"+id;
@@ -19,6 +20,7 @@ softModCreator.factory('Software', ['DataContainer', 'Categories', 'Category', '
 		this.inHouse.value = false;
 		this.categories.value = [];
 		this.needs.value = [];
+		this.features.value = [];
 
 	}
 
@@ -46,6 +48,10 @@ softModCreator.factory('Software', ['DataContainer', 'Categories', 'Category', '
 			soft.needs.value.push(Need.load(savedSoft.needs.value[need]));
 		}
 
+		for(var feat in savedSoft.features.value) {
+			soft.features.value.push(Features.load(savedSoft.features.value[feat]));
+		}
+
 		return soft;
 	}
 
@@ -55,6 +61,10 @@ softModCreator.factory('Software', ['DataContainer', 'Categories', 'Category', '
  
  	Software.prototype.addNeed = function () {
      	this.needs.value.push(Need.build(this.needs.value.length));
+ 	};
+
+ 	Software.prototype.addFeature = function () {
+     	this.features.value.push(Features.build(this.features.value.length));
  	};
 
 	/**

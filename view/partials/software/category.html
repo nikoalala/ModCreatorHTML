@@ -16,6 +16,12 @@
 			</div>
 		</div>
 		<div class="row">
+			<label class="col-lg-3 control-label" for="unlock">{{ selectedCategory.unlock.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedCategory.unlock.value" id="unlock" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
 			<label class="col-lg-3 control-label" for="popularity">{{ selectedCategory.popularity.description | translate}}</label>
 			<div class="col-lg-8">
 				<input type="text" ng-model="selectedCategory.popularity.value" id="popularity" class="form-control"/>
@@ -45,6 +51,6 @@
 				<input type="text" ng-model="selectedCategory.nameGenerator.value" id="nameGenerator" class="form-control"/>
 			</div>
 		</div>
-		<button id="addCategory" ng-click="validBtn()" class="btn btn-default pull-right">{{ 'BTN_VALID' | translate}}</button>
+		<button id="valid" ng-click="validBtn()" class="btn btn-default pull-right">{{ 'BTN_VALID' | translate}}</button>
 	</div>
 </div>

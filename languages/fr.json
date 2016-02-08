@@ -11,6 +11,8 @@
     "SOFTWARE_LABEL": "Logiciel",
     "CATEGORY_LABEL": "Catégorie",
     "NEED_LABEL": "Dépendance logiciel",
+    "FEATURE_LABEL": "Fonctionnalité",
+    "DEPENDENCY_LABEL": "Dépendance",
 
     "SOFT_NAME_TRAD": "Nom",
     "SOFT_TYPE_TRAD": "Type",
@@ -21,6 +23,7 @@
     "SOFT_ONECLIENT_TRAD": "Logiciel pour contrat",
     "SOFT_INHOUSE_TRAD": "Conserver dans l'entreprise",
     "SOFT_NEEDS_TRAD": "Dépendances logiciel",
+    "SOFT_FEATURES_TRAD": "Fonctionnalités",
 
     "INFORMATION_LABEL": "Information",
     "FEATURES_LABEL": "Fonctions",
@@ -33,7 +36,27 @@
     "CATEG_ITERATIVE_TRAD": "Utilisation par l'IA",
     "CATEG_NAMEGEN_TRAD": "Générateur de nom",
     "CATEG_DEFAULT_NAME": "Nouvelle catégorie",
+    "CATEG_UNLOCK_TRAD": "Date d'apparition",
     
+    "FEAT_FORCED_TRAD": "Forcé",
+    "FEAT_FROM_TRAD": "Fils de",
+    "FEAT_NAME_TRAD": "Nom",
+    "FEAT_DESCRIPTION_TRAD": "Description",
+    "FEAT_DEVTIME_TRAD": "Temps de développement",
+    "FEAT_INNOVATION_TRAD": "Innovation",
+    "FEAT_USABILITY_TRAD": "Ergonomie",
+    "FEAT_STABILITY_TRAD": "Stabilité",
+    "FEAT_CODEART_TRAD": "Ratio Code/Art",
+    "FEAT_DEPENDENCIES_TRAD": "Dépendances",
+    "FEAT_DEPENDENCY_TRAD": "Dépendance",
+    "FEAT_UNLOCK_TRAD": "Date d'apparition",
+    "FEAT_SERVER_TRAD": "Bande passante",
+    "FEAT_SOFTWARECATEGORY_TRAD": "Pour une catégorie",
+
+    "DEP_NAME_TRAD": "Dépendance",
+    "DEP_SOFT_TRAD": "Type de logiciel",
+
+
     "NEED_NAME_TRAD": "Logiciel",
 
     "BTN_SOFT_BACK": "Accueil",
@@ -44,6 +67,8 @@
     "BTN_ADD_NAME_GEN": "Ajouter un générateur de nom",
     "BTN_ADD_CATEGORY": "Ajouter une catégorie",
     "BTN_ADD_NEED": "Ajouter une dépendance",
+    "BTN_ADD_FEATURE": "Ajouter une fonctionnalité",
+    "BTN_ADD_DEPENDENCY": "Ajouter une dépendance",
     "BTN_VALID": "Valider"
 
 

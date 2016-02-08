@@ -1,0 +1,19 @@
+<div class="row col-lg-12 sim_header">
+	<label class="bg-success col-lg-12">{{ 'DEPENDENCY_LABEL' | translate}}</label>
+</div>
+<div class="col-lg-12 form-horizontal">
+	<div class="sim_block">
+		<div class="row">
+			<label class="col-lg-3 control-label" for="dependency">{{ selectedDependency.dependency.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedDependency.dependency.value" id="dependency" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-3 control-label" for="soft">{{ 'DEP_SOFT_TRAD' | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedDependency.dependency.xmlAttributeValue" id="soft" class="form-control"/>
+			</div>
+		</div>
+	</div>
+</div>

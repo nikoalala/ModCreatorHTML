@@ -76,8 +76,9 @@ softModCreator.factory('ZipFile', [function () {
 				var container = data[field];
 				console.log(container);
 				if(container.xmlName != undefined) {
-				//	xw.writeStartElement(container.xmlName);
-					if(typeof container.value == "string") {
+					if(container.xmlAttribute != undefined){
+						writeValueAttributeElement(xw, container);
+					} else if(typeof container.value == "string") {
 						xw.writeElementString(container.xmlName, container.value);
 					} else if(typeof container.value == "boolean") {
 						xw.writeElementString(container.xmlName, ""+container.value);
@@ -91,14 +92,21 @@ softModCreator.factory('ZipFile', [function () {
 						xw.writeStartElement(container.xmlName);
 						
 						parseObject(xw, container.value);
-					
+						
 						xw.writeEndElement();
 					}
-				} else if(container.xmlAttribute) {
+				} else if(container.xmlAttribute && container.value != undefined) {
 					xw.writeAttributeString( container.xmlAttribute, container.value);
 				}
 			}
 		}
+	}
+
+	function writeValueAttributeElement(xw, container) {
+		xw.writeStartElement(container.xmlName);
+		xw.writeAttributeString(container.xmlAttribute, container.xmlAttributeValue);
+		xw.writeString(container.value);
+		xw.writeEndElement();
 	}
 
 	ZipFile.prototype.sendToClient = function (fileName) {

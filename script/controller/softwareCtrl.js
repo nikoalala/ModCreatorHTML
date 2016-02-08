@@ -6,6 +6,8 @@ softModCreator.controller('softwareCtrl', ['$scope', '$routeParams', function($s
 
 	$scope.selectedCategory = undefined;
 	$scope.selectedNeed = undefined;
+	$scope.selectedFeature = undefined;
+	$scope.selectedDependency = undefined;
 
 	$scope.addCategoryBtn = function() {
 		$scope.selectedSoftware.addCategory();
@@ -13,6 +15,14 @@ softModCreator.controller('softwareCtrl', ['$scope', '$routeParams', function($s
 
 	$scope.addNeedBtn = function() {
 		$scope.selectedSoftware.addNeed();
+	}
+
+	$scope.addFeatureBtn = function() {
+		$scope.selectedSoftware.addFeature();
+	}
+
+	$scope.addDependencyBtn = function() {
+		$scope.selectedFeature.addDependency();
 	}
 
 	$scope.validBtn = function() {
@@ -29,8 +39,20 @@ softModCreator.controller('softwareCtrl', ['$scope', '$routeParams', function($s
 		$scope.selectedNeed = $scope.selectedSoftware.needs.value[index];
 	}
 
+	$scope.selectFeature = function(index) {
+		resetSubView($scope);
+		$scope.selectedFeature = $scope.selectedSoftware.features.value[index].feature.value;
+	}
+
+	$scope.selectDependency = function(index) {
+		//resetSubView($scope);
+		$scope.selectedDependency = $scope.selectedFeature.dependencies.value[index];
+	}
+
 	function resetSubView($scope) {
-		$scope.selectedNeed = undefined;
 		$scope.selectedCategory = undefined;
+		$scope.selectedNeed = undefined;
+		$scope.selectedFeature = undefined;
+		$scope.selectedDependency = undefined;
 	}
 }]);
