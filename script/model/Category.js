@@ -10,6 +10,7 @@ softModCreator.factory('Category', ['$translate', 'DataContainer', function ($tr
 		this.retention = DataContainer.build("Retention", "CATEG_RETENTION_TRAD", "Retention");
 		this.timeScale = DataContainer.build("TimeScale", "CATEG_TIMESCALE_TRAD", "TimeScale");
 		this.iterative = DataContainer.build("Iterative", "CATEG_ITERATIVE_TRAD", "Iterative");
+		//necessaire
 		this.nameGenerator = DataContainer.build("NameGenerator", "CATEG_NAMEGEN_TRAD", "NameGenerator");
 	}
 

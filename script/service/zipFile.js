@@ -29,7 +29,7 @@ softModCreator.factory('ZipFile', [function () {
 
 		for(var software in data) {
 			if(data.hasOwnProperty(software)) {
-				softwareTypesFolder.file(data[software].fileName+".xml", generateXml(data[software], type));
+				softwareTypesFolder.file(data[software].fileName+".xml", removeFirstLine(generateXml(data[software], type)));
 			}
 		}
 	}
@@ -74,28 +74,29 @@ softModCreator.factory('ZipFile', [function () {
 		for(var field in data) {
 			if(data.hasOwnProperty(field)) {
 				var container = data[field];
-				console.log(container);
+			//	console.log(container);
 				if(container.xmlName != undefined) {
 					if(container.xmlAttribute != undefined){
 						writeValueAttributeElement(xw, container);
-					} else if(typeof container.value == "string") {
+					} else if(container.value != undefined && typeof container.value == "string" && container.value != "") {
 						xw.writeElementString(container.xmlName, container.value);
-					} else if(typeof container.value == "boolean") {
+					} else if(container.value != undefined && typeof container.value == "boolean") {
 						xw.writeElementString(container.xmlName, ""+container.value);
-					} else if(container.value instanceof Array) {
+					} else if(container.value instanceof Array ) {
 						xw.writeStartElement(container.xmlName);
 						for(var index in container.value) {
 							parseObject(xw, container.value[index]);
 						}
+						xw.writeString("");
 						xw.writeEndElement();
-					} else {
+					} else if(container.value != undefined && container.value != false){
 						xw.writeStartElement(container.xmlName);
 						
 						parseObject(xw, container.value);
 						
 						xw.writeEndElement();
 					}
-				} else if(container.xmlAttribute && container.value != undefined) {
+				} else if(container.xmlAttribute && container.value != undefined && container.value != false) {
 					xw.writeAttributeString( container.xmlAttribute, container.value);
 				}
 			}
@@ -109,6 +110,14 @@ softModCreator.factory('ZipFile', [function () {
 		xw.writeEndElement();
 	}
 
+	function removeFirstLine(textblock) {
+		// break the textblock into an array of lines
+		var lines = textblock.split('\n');
+		// remove one line, starting at the first position
+		lines.splice(0,1);
+		// join the array back into a single string
+		return lines.join('\n');
+	}
 	ZipFile.prototype.sendToClient = function (fileName) {
 
  		var content = this.zip.generate({type:"blob"});

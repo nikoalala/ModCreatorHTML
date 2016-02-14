@@ -16,6 +16,12 @@
 			</div>
 		</div>
 		<div class="row">
+			<label class="col-lg-3 control-label" for="category">{{ selectedFeature.category.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="text" ng-model="selectedFeature.category.value" id="category" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
 			<label class="col-lg-3 control-label" for="unlock">{{ selectedFeature.unlock.description | translate}}</label>
 			<div class="col-lg-8">
 				<input type="text" ng-model="selectedFeature.unlock.value" id="unlock" class="form-control"/>
@@ -25,6 +31,12 @@
 			<label class="col-lg-3 control-label" for="forced">{{ selectedFeature.forced.description | translate}}</label>
 			<div class="col-lg-8">
 				<input type="checkbox" ng-model="selectedFeature.forced.value" id="forced" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<label class="col-lg-3 control-label" for="vital">{{ selectedFeature.vital.description | translate}}</label>
+			<div class="col-lg-8">
+				<input type="checkbox" ng-model="selectedFeature.vital.value" id="vital" class="form-control"/>
 			</div>
 		</div>
 		<div class="row">

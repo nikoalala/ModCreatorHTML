@@ -1,11 +1,13 @@
 softModCreator.factory('Feature', ['$translate', 'DataContainer', 'Dependency', 
 function ($translate, DataContainer, Dependency) {
 	function Feature (id) {
-		this.forced = DataContainer.build("Forced", "FEAT_FORCED_TRAD", undefined);
+		this.forced = DataContainer.build("Forced", "FEAT_FORCED_TRAD", undefined); // au moins une
 		this.from = DataContainer.build("From", "FEAT_FROM_TRAD", undefined);
+		this.vital = DataContainer.build("Vital", "FEAT_VITAL_TRAD", undefined);
 		this.name = DataContainer.build("Name", "FEAT_NAME_TRAD", "Name");
+		this.category = DataContainer.build("Category", "FEAT_CATEGORY_TRAD", "Category");
 		this.description = DataContainer.build("Description", "FEAT_DESCRIPTION_TRAD", "Description");
-		this.devtime = DataContainer.build("DevTime", "FEAT_DEVTIME_TRAD", "DevTime");
+		this.devtime = DataContainer.build("DevTime", "FEAT_DEVTIME_TRAD", "DevTime"); //entier
 		this.innovation = DataContainer.build("Innovation", "FEAT_INNOVATION_TRAD", "Innovation");
 		this.usability = DataContainer.build("Usability", "FEAT_USABILITY_TRAD", "Usability");
 		this.stability = DataContainer.build("Stability", "FEAT_STABILITY_TRAD", "Stability");
@@ -18,6 +20,7 @@ function ($translate, DataContainer, Dependency) {
 		
 		this.forced.xmlAttribute = "Forced";
 		this.from.xmlAttribute = "From";
+		this.from.xmlAttribute = "Vital";
 		this.forced.value = false;
 		this.name.value = "Feat"+id;
 		this.dependencies.value = [];
@@ -42,6 +45,8 @@ function ($translate, DataContainer, Dependency) {
 		feat.unlock.value = savedFeat.unlock.value;
 		feat.server.value = savedFeat.server.value;
 		feat.softwarecategory.value = savedFeat.softwarecategory.value;
+		feat.vital.value = savedFeat.vital.value;
+		feat.category.value = savedFeat.category.value;
 
 		for(var f in savedFeat.dependencies.value) {
 			feat.dependencies.value.push(Dependency.load(savedFeat.dependencies.value[f]));

@@ -1,6 +1,6 @@
 <a id="btn_soft_back" href="#/" class="btn btn-default">{{ 'BTN_SOFT_BACK' | translate}}</a>
 <div class="row col-lg-12 sim_header">
-	<label class="bg-success col-lg-12">{{ 'SOFTWARE_LABEL' | translate}}</label>
+	<label class="bg-success col-lg-12">{{ 'NAMEGENERATOR_LABEL' | translate}}</label>
 </div>
 <div class="col-lg-6 form-horizontal">
 	<div class="sim_block">
@@ -17,12 +17,6 @@
 			<label class="col-lg-4 control-label" for="name">{{ selectedSoftware.name.description | translate}}</label>
 			<div class="col-lg-6">
 				<input type="text" ng-model="selectedSoftware.name.value" id="name" class="form-control"/>
-			</div>
-		</div>
-		<div class="row">
-			<label class="col-lg-4 control-label" for="override">{{ selectedSoftware.override.description | translate}}</label>
-			<div class="col-lg-6">
-				<input type="checkbox" ng-model="selectedSoftware.override.value" id="override" class="form-control"/>
 			</div>
 		</div>
 		<div class="row">
@@ -46,7 +40,7 @@
 		<div class="row">
 			<label class="col-lg-4 control-label" for="unlock">{{ selectedSoftware.unlock.description | translate}}</label>
 			<div class="col-lg-6">
-				<input type="text" ng-model="selectedSoftware.unlock.value" id="unlock" class="form-control"/>
+				<input type="number" min="1970" ng-model="selectedSoftware.unlock.value" id="unlock" class="form-control"/>
 			</div>
 		</div>
 		<div class="row">
@@ -65,12 +59,6 @@
 			<label class="col-lg-4 control-label" for="iterative">{{ selectedSoftware.iterative.description | translate}}</label>
 			<div class="col-lg-6">
 				<input type="text" ng-model="selectedSoftware.iterative.value" id="iterative" class="form-control"/>
-			</div>
-		</div>
-		<div class="row">
-			<label class="col-lg-4 control-label" for="nameGenerator">{{ selectedSoftware.nameGenerator.description | translate}}</label>
-			<div class="col-lg-6">
-				<input type="text" ng-model="selectedSoftware.nameGenerator.value" id="nameGenerator" class="form-control"/>
 			</div>
 		</div>
 		<div class="row">
