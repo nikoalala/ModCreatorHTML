@@ -19,6 +19,10 @@ softModCreator.factory('Features', ['$translate', 'DataContainer', 'Feature',
 	Features.prototype.addDependency = function() {
 		this.feature.value.addDependency();
 	}
+
+	Features.prototype.removeDependency = function(index) {
+		this.feature.value.removeDependency(index);
+	}
 	
 	/**
 	* Return the constructor function

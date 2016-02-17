@@ -84,6 +84,18 @@ softModCreator.factory('Software', ['DataContainer', 'Categories', 'Category', '
      	this.features.value.push(Features.build(this.features.value.length));
  	};
 
+	Software.prototype.removeCategory = function (index) {
+     	this.categories.value.splice(index, 1);
+ 	};
+ 
+ 	Software.prototype.removeNeed = function (index) {
+     	this.needs.value.splice(index, 1);
+ 	};
+
+ 	Software.prototype.removeFeature = function (index) {
+     	this.features.value.splice(index, 1);
+ 	};
+
 	/**
 	* Return the constructor function
 	*/

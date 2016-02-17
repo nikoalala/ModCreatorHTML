@@ -59,6 +59,10 @@ function ($translate, DataContainer, Dependency) {
 		this.dependencies.value.push(Dependency.build(this.dependencies.value.length));
 	}
 
+	Feature.prototype.removeDependency = function(index) {
+		this.dependencies.value.splice(index, 1);
+	}
+
 	/**
 	* Return the constructor function
 	*/
